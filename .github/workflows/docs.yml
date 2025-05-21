@@ -1,9 +1,10 @@
 name: Docs
 
 on:
+  pull_request:
   push:
     branches:
-      - 'main'
+      - 'master'
 
 jobs:
   deploy:
@@ -25,16 +26,12 @@ jobs:
       - name: Build Docs
         run: pnpm run docs:build
 
-      - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v3
+      - name: Deploy documentation (including Javadoc) to GitHub Pages
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
         with:
-          publish-dir: './dist'
-          production-branch: main
-          deploy-message: 'deploy from github actions'
-          enable-pull-request-comment: false
-          enable-commit-comment: true
-          overwrites-pull-request-comment: true
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 1
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
+          enable_jekyll: false
+          user_name: QubitPi
+          user_email: jack20220723@gmail.com
+          cname: react-perfectionist.qubitpi.org
