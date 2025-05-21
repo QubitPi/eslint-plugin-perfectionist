@@ -1,0 +1,1 @@
+import{m as t,t as m}from"./menu-open.DsvSCRUK.js";import"./index.3whys8t3.js";let n=async()=>{let e=document.getElementById("menu");t.set(!1),t.subscribe(s=>{s?e.classList.add("menu-open"):setTimeout(()=>{e.classList.remove("menu-open")},200)}),document.getElementById("menu-close-button").addEventListener("click",m)};document.addEventListener("astro:after-swap",n);n();
