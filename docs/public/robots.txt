@@ -1,5 +1,5 @@
 User-agent: *
-Allow: /
+Disallow: /
 
 Host: perfectionist.dev
 Sitemap: https://perfectionist.dev/sitemap-index.xml
