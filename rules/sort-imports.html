@@ -266,17 +266,32 @@ Skip to main content
               </svg>
             </a>
             maxLineLength
-          </h3><sub>default: <code>undefined</code></sub><p>Specifies a maximum line length for sorting imports. When the line length exceeds this number, sorting will be based only on the import name, excluding the elements.</p><p>This option is only available when the type is set to <code>&#39;line-length&#39;</code>.</p></section><section><h3 id="tsconfigrootdir">
-            <a href="#tsconfigrootdir" aria-label="tsconfigRootDir" class="heading-anchor">
+          </h3><sub>default: <code>undefined</code></sub><p>Specifies a maximum line length for sorting imports. When the line length exceeds this number, sorting will be based only on the import name, excluding the elements.</p><p>This option is only available when the type is set to <code>&#39;line-length&#39;</code>.</p></section><section><h3 id="tsconfig">
+            <a href="#tsconfig" aria-label="tsconfig" class="heading-anchor">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 20L10 4M14 20L17 4M19.5 15H3.5M20.5 9L4.5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
             </a>
-            tsconfigRootDir
-          </h3><sub>default: <code>undefined</code></sub><p>Specifies the  directory of the root <code>tsconfig.json</code> file (ex: <code>.</code>). This is used in <a href="#groups"><code>groups</code></a> for:</p><ul>
+            tsconfig
+          </h3><sub><p>type: <code>{ rootDir: string; filename?: string }</code></p></sub><sub>default: undefined</sub><ul>
+<li><code>rootDir</code> — Specifies the directory of the root <code>tsconfig.json</code> file (ex: <code>.</code>). This is used in <a href="#groups"><code>groups</code></a> for:
+<ul>
 <li>Marking aliased imports as <code>internal</code>.</li>
 <li>Marking imports matching <a href="https://www.typescriptlang.org/tsconfig/#paths" rel="noopener noreferrer" target="_blank">tsconfig paths</a> as <code>tsconfig-path</code>.</li>
-</ul></section><section><h3 id="groups">
+</ul>
+</li>
+<li><code>filename</code> — Specifies the <code>tsconfig</code> filename to search for (by default: <code>tsconfig.json</code>).</li>
+</ul><p>If this option is not set, the rule will not search for a <code>tsconfig.json</code> file.</p></section><section><h3 id="deprecated-tsconfigrootdir">
+            <a href="#deprecated-tsconfigrootdir" aria-label="[DEPRECATED] tsconfigRootDir" class="heading-anchor">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 20L10 4M14 20L17 4M19.5 15H3.5M20.5 9L4.5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+            [DEPRECATED] tsconfigRootDir
+          </h3><sub>default: <code>undefined</code></sub><p>Use the <a href="#tsconfig">tsconfig</a> option with the <code>rootDir</code> attribute.</p><p>Specifies the  directory of the root <code>tsconfig.json</code> file (ex: <code>.</code>). This is used in <a href="#groups"><code>groups</code></a> for:</p><ul>
+<li>Marking aliased imports as <code>internal</code>.</li>
+<li>Marking imports matching <a href="https://www.typescriptlang.org/tsconfig/#paths" rel="noopener noreferrer" target="_blank">tsconfig paths</a> as <code>tsconfig-path</code>.</li>
+</ul><p>If this option is not set, the rule will not search for a <code>tsconfig.json</code> file.</p></section><section><h3 id="groups">
             <a href="#groups" aria-label="groups" class="heading-anchor">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 20L10 4M14 20L17 4M19.5 15H3.5M20.5 9L4.5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -612,13 +627,20 @@ Table of Contents  </h2> <ul class="list" data-astro-cid-ca23gd3i><li class="ite
               
             
             maxLineLength
-           </span>  </a>  </li> <li class="item" data-astro-cid-pzvekhmd> <a href="#tsconfigrootdir" class="link" data-astro-cid-pzvekhmd> <span data-astro-cid-pzvekhmd="true" data-astro-cid-jt5puqnf="true" class="typography size-xs color-primary weight-normal"> 
+           </span>  </a>  </li> <li class="item" data-astro-cid-pzvekhmd> <a href="#tsconfig" class="link" data-astro-cid-pzvekhmd> <span data-astro-cid-pzvekhmd="true" data-astro-cid-jt5puqnf="true" class="typography size-xs color-primary weight-normal"> 
             
               
                 
               
             
-            tsconfigRootDir
+            tsconfig
+           </span>  </a>  </li> <li class="item" data-astro-cid-pzvekhmd> <a href="#deprecated-tsconfigrootdir" class="link" data-astro-cid-pzvekhmd> <span data-astro-cid-pzvekhmd="true" data-astro-cid-jt5puqnf="true" class="typography size-xs color-primary weight-normal"> 
+            
+              
+                
+              
+            
+            [DEPRECATED] tsconfigRootDir
            </span>  </a>  </li> <li class="item" data-astro-cid-pzvekhmd> <a href="#groups" class="link" data-astro-cid-pzvekhmd> <span data-astro-cid-pzvekhmd="true" data-astro-cid-jt5puqnf="true" class="typography size-xs color-primary weight-normal"> 
             
               
