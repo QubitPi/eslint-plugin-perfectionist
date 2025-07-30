@@ -1,1 +1,0 @@
-import{t as e}from"./menu-open.DsvSCRUK.js";import"./index.3whys8t3.js";let t=()=>{document.getElementById("menu-button").addEventListener("click",e)};document.addEventListener("astro:after-swap",t);t();
